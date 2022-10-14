@@ -26,7 +26,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
@@ -51,49 +51,53 @@
                             <a class="nav-link disabled">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main class=" ">
         <div class="container">
-            <h1>Ini adalah latihan fetch api</h1>
+            <h1 class="fw-bold">Fetch API Pokemon</h1>
         </div>
-        <div class="container mt-5">
-            <form id="form_search" autocomplete="off">
-                <div class="col">
-                    <label for="nama_pokemon" class="form-label">Masukkan nama Pokemon</label>
-                    <input type="text" name="nama_pokemon" id="nama_pokemon" class="form-control"
-                        placeholder="Masukkan nama pokemon, Contoh ditto">
-                </div>
-                <div class="col mt-3">
-                    <button class="btn btn-success">Cari Pokemon</button>
-                </div>
-            </form>
-        </div>
-        <div class="container overflow-scroll overflow-y">
-            <table class="table ">
-                <thead>
-                    <tr>
-                        <th scope="col">ID Pokemon</th>
-                        <th scope="col">Nama Pokemon</th>
-                        <th scope="col">Berat Pokemon</th>
-                        <th scope="col">Ability Pokemon</th>
-                        <th scope="col">Gambar Pokemon</th>
-                    </tr>
-                </thead>
-                <tbody id="poke_details">
+        <div class="wrapper">
+            <div class="container mt-5">
+                <form id="form_search" autocomplete="off">
+                    <div class="col">
+                        <label for="nama_pokemon" class="form-label">Masukkan nama Pokemon</label>
+                        <input type="text" name="nama_pokemon" id="nama_pokemon" class="form-control"
+                            placeholder="Masukkan nama pokemon, Contoh ditto">
+                    </div>
+                    <div class="col mt-3">
+                        <button class="btn btn-success">Cari Pokemon</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container overflow-auto">
+                <table class="table ">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID Pokemon</th>
+                            <th scope="col">Nama Pokemon</th>
+                            <th scope="col">Berat Pokemon</th>
+                            <th scope="col">Ability Pokemon</th>
+                            <th scope="col">Gambar Pokemon</th>
+                        </tr>
+                    </thead>
+                    <tbody id="poke_details">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
 
+
+    <style>
+        .wrapper {
+            margin-top: 10em;
+        }
+    </style>
 </body>
 
 </html>
