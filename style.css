@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+.wrapper {
+  margin-top: 10em;
+}
+
+footer {
+  margin-top: 10em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
