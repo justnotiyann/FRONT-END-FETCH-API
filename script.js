@@ -18,9 +18,13 @@ const displayData = (id, nama, berat, ability, gambar) => {
 };
 
 const fetchAPI = async (data) => {
-  const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${data}`);
-  const result = await api.json();
-  displayData(result.id, result.name, result.weight, result.abilities[0].ability.name, result.sprites.front_default);
+  try {
+    const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${data}`);
+    const result = await api.json();
+    displayData(result.id, result.name, result.weight, result.abilities[0].ability.name, result.sprites.front_default);
+  } catch (e) {
+    alert("Tidak ada nama pokemon tersebut");
+  }
 };
 
 formSearch.addEventListener("submit", (e) => {
